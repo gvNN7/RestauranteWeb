@@ -501,7 +501,7 @@ header.sticky .nav-collapse a:hover{
     border: none;
     border-bottom: 1px solid #333333;
     background-color:transparent;
-    padding: 30px 60px 10px 20px;
+	padding: 30px 50px 8px 20px;
     outline: 0;  		
   }
   input[type="email"]{
@@ -637,5 +637,4 @@ if it's not present, don't show loader */
 @-moz-keyframes cssload-spin {
   100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
 }
-
 
