@@ -1,0 +1,79 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> <html>
+<head>
+<script type="text/javascript">
+function addTable() {
+    var myTableDiv = document.getElementById("metric_results")
+    var table = document.createElement('TABLE')
+    var tableBody = document.createElement('TBODY')
+
+    table.border = '1'
+    table.appendChild(tableBody);
+
+    var heading = new Array();
+    heading[0] = "Carrinho"
+    heading[1] = "Pratos"
+    heading[2] = "Descrição"
+    heading[3] = "Quantidade"
+    heading[4] = "Total"
+
+    var stock = new Array()
+    stock[0] = new Array("1", "SALADA CEASER VEGAN", "ricota, mussarela, grãos e ervas", 1, "R$"+12)
+    stock[1] = new Array("2", "SALADA COM SHOYU E VERDURAS", "verduras selecionadas com molho shoyu especial", 1, "R$"+17)
+    stock[2] = new Array("3", "PRATO PRINCIPAL DO CHEFF", "prato a base de beringela e especiarias", 1, "R$"+22)
+    stock[3] = new Array("4", "MISTUREBA FOOD", "mistura de essências veganas", 1, "R$"+31)
+    stock[4] = new Array("5", "FELINO'S FOOD", "prato mega saldável para o seu gato", 1, "R$"+25)
+    stock[5] = new Array("6", "CREME DE PAPAYA", "creme de papaya cremoso com licor", 1, "R$"+12)
+    stock[6] = new Array("7", "DOCE DE AMENDOIN", "delicioso doce de amendoin", 1, "R$"+5)
+    stock[7] = new Array("8", "TORTA DE NINHO E NUTELLA", "torta exclusiva do Restaurante Verde", 1, "R$"+7)
+
+    for(i=0; i< stock.length;i++)
+    {
+        soma += stock[stock.length - 1];
+        
+    }
+    console.log(soma)
+    
+    // if(document.getElementsByName('democheckbox').values() == 1)
+    // {
+    //     var stock = new Array()
+    //     for(i = 10; i < 10;i++)
+    //     {
+    //         nome = document.getElementById('1');
+    //         descricao = document.getElementById('descricao');
+    //         quantidade = document.getElementById('').options[document.getElementById('selecao').selectedIndex].text;
+    //         preco = document.getElementById('preco');
+    //         stock[i] = new Array(i, nome, descricao, quantidade, preco);
+    //     }
+        
+    // }
+
+    //Colunas
+    var tr = document.createElement('TR');
+    tableBody.appendChild(tr);
+    for (i = 0; i < heading.length; i++) {
+        var th = document.createElement('TH')
+        th.width = '75';
+        th.appendChild(document.createTextNode(heading[i]));
+        tr.appendChild(th);
+    }
+
+    //Linhas
+    for (i = 0; i < stock.length; i++) {
+        var tr = document.createElement('TR');
+        for (j = 0; j < stock[i].length; j++) {
+            var td = document.createElement('TD')
+            td.appendChild(document.createTextNode(stock[i][j]));
+            tr.appendChild(td)
+        }
+        tableBody.appendChild(tr);
+    }  
+    myTableDiv.appendChild(table)
+}
+</script>
+</head>
+<body>
+<div id="metric_results">
+    <input type="button" id="create" value="Click here" onclick="Javascript:addTable()">
+</div>
+</body>
+</html>
