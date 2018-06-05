@@ -1,5 +1,7 @@
  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> <html>
 <head>
+    <meta charset="UTF-8">
+
 <script type="text/javascript">
 function addTable() {
     var myTableDiv = document.getElementById("metric_results")
@@ -17,42 +19,24 @@ function addTable() {
     heading[4] = "Total"
 
     var stock = new Array()
-    stock[0] = new Array("1", "SALADA CEASER VEGAN", "ricota, mussarela, grãos e ervas", 1, "R$"+12)
-    stock[1] = new Array("2", "SALADA COM SHOYU E VERDURAS", "verduras selecionadas com molho shoyu especial", 1, "R$"+17)
-    stock[2] = new Array("3", "PRATO PRINCIPAL DO CHEFF", "prato a base de beringela e especiarias", 1, "R$"+22)
-    stock[3] = new Array("4", "MISTUREBA FOOD", "mistura de essências veganas", 1, "R$"+31)
-    stock[4] = new Array("5", "FELINO'S FOOD", "prato mega saldável para o seu gato", 1, "R$"+25)
-    stock[5] = new Array("6", "CREME DE PAPAYA", "creme de papaya cremoso com licor", 1, "R$"+12)
-    stock[6] = new Array("7", "DOCE DE AMENDOIN", "delicioso doce de amendoin", 1, "R$"+5)
-    stock[7] = new Array("8", "TORTA DE NINHO E NUTELLA", "torta exclusiva do Restaurante Verde", 1, "R$"+7)
+     stock[0] = new Array("1", "SALADA CEASER VEGAN", "ricota, mussarela, grãos e ervas", 1, "R$"+12)
+    // stock[1] = new Array("2", "SALADA COM SHOYU E VERDURAS", "verduras selecionadas com molho shoyu especial", 1, "R$"+17)
+    stock[1] = new Array("2", "PRATO PRINCIPAL DO CHEFF", "prato a base de beringela e especiarias", 1, "R$"+22)
+    // stock[3] = new Array("4", "MISTUREBA FOOD", "mistura de essênias veganas", 1, "R$"+31)
+    // stock[4] = new Array("5", "FELINO'S FOOD", "prato mega saldávl para o seu gato", 1, "R$"+25)
+    // stock[5] = new Array("6", "CREME DE PAPAYA", "creme de papaya cremoso com licor", 1, "R$"+12)
+    // stock[6] = new Array("7", "DOCE DE AMENDOIN", "delicioso doce de amendoin", 1, "R$"+5)
+    stock[2] = new Array("3", "TORTA DE NINHO E NUTELLA", "torta exclusiva do Restaurante Verde", 1, "R$"+7)
+    // 
+    stock[3] = new Array("4", "TOTAL", "################################", "####", "R$"+41)
 
-    for(i=0; i< stock.length;i++)
-    {
-        soma += stock[stock.length - 1];
-        
-    }
-    console.log(soma)
     
-    // if(document.getElementsByName('democheckbox').values() == 1)
-    // {
-    //     var stock = new Array()
-    //     for(i = 10; i < 10;i++)
-    //     {
-    //         nome = document.getElementById('1');
-    //         descricao = document.getElementById('descricao');
-    //         quantidade = document.getElementById('').options[document.getElementById('selecao').selectedIndex].text;
-    //         preco = document.getElementById('preco');
-    //         stock[i] = new Array(i, nome, descricao, quantidade, preco);
-    //     }
-        
-    // }
-
     //Colunas
     var tr = document.createElement('TR');
     tableBody.appendChild(tr);
     for (i = 0; i < heading.length; i++) {
         var th = document.createElement('TH')
-        th.width = '75';
+        th.width = '150';
         th.appendChild(document.createTextNode(heading[i]));
         tr.appendChild(th);
     }

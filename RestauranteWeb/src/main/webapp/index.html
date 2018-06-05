@@ -117,13 +117,42 @@
 				</form>
 
 
-				<div class="modal-footer">
+				<div class="modal-footer" align="center">
 					<button type="button" class="btn btn-secondary"
 						data-dismiss="modal">Fechar</button>
 					<button type="button" class="btn btn-primary">Registre-se
 						!</button>
 					<button type="button" class="btn btn-primary">Já tem uma
 						conta? Acesse!</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="pagamento" tabindex="-1"
+		role="dialog">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Informe o método de pagamento</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<form class="text-center">
+					<input type="text" name="cartaoID" placeholder="Número do cartão">
+					<input type="text" name="cartaoID" placeholder="Data de validade"> 
+					<input type="text" name="passID" placeholder="Número de trás do cartão">
+				</form>
+
+
+				<div class="modal-footer" align="center">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Cancelar compra</button>
+					<button type="button" class="btn btn-primary">Efetuar pagamento</button>
 				</div>
 			</div>
 		</div>
@@ -188,47 +217,47 @@
 					<div class="innerspecial os-animation"
 						data-os-animation="fadeInDown" data-os-animation-delay="0.6s">
 						<img src="img/special1.jpg" alt="">
-						<h2>Soko radicchio</h2>
+						<h2>Salada de frutas</h2>
 						<span class="line"></span>
-						<p>Lorem ipsum dolor sit Pellentesque vel enim a</p>
-						<span>7$</span>
+						<p>Salada de frutas para o seu felino</p>
+						<span>R$ 7</span>
 					</div>
 					<div class="innerspecial os-animation" data-os-animation="fadeInUp"
 						data-os-animation-delay="0.7s">
-						<h2>Greens fava</h2>
+						<h2>Fava verde</h2>
 						<span class="line"></span>
-						<p>Lorem ipsum dolor sit Pellentesque vel enim a</p>
-						<span>19$</span> <img src="img/special2.jpg" alt="">
+						<p>Cremosa fava verde</p>
+						<span>R$ 19</span> <img src="img/special2.jpg" alt="">
 					</div>
 					<div class="innerspecial os-animation"
 						data-os-animation="fadeInDown" data-os-animation-delay="0.8s">
 						<img src="img/special3.jpg" alt="">
-						<h2>Tigernut</h2>
+						<h2>Sopa de verduras</h2>
 						<span class="line"></span>
-						<p>Lorem ipsum dolor sit Pellentesque vel enim a</p>
-						<span>12$</span>
+						<p>Sopa com verduras selecionadas e totalmente sem agrotóxicos</p>
+						<span>R$ 12</span>
 					</div>
 					<div class="innerspecial os-animation" data-os-animation="fadeInUp"
 						data-os-animation-delay="0.9s">
-						<h2>Celery quandong</h2>
+						<h2>Salada mix alemã</h2>
 						<span class="line"></span>
-						<p>Lorem ipsum dolor sit Pellentesque vel enim a</p>
-						<span>7$</span> <img src="img/special1.jpg" alt="">
+						<p>Exclusiva salada alemã com verduras, torradas, e molho especial</p>
+						<span>R$ 7</span> <img src="img/special1.jpg" alt="">
 					</div>
 					<div class="innerspecial os-animation"
 						data-os-animation="fadeInDown" data-os-animation-delay="1.0s">
 						<img src="img/special4.jpg" alt="">
-						<h2>Yarrow sweet</h2>
+						<h2>Rucúla e tomate</h2>
 						<span class="line"></span>
-						<p>Lorem ipsum dolor sit Pellentesque vel enim a</p>
-						<span>30$</span>
+						<p>Mix de rúcula e tomate feito por felinos</p>
+						<span>R$ 30</span>
 					</div>
 					<div class="innerspecial os-animation" data-os-animation="fadeInUp"
 						data-os-animation-delay="1.1s">
-						<h2>Pea horseradish</h2>
+						<h2>Raspadinha de melância</h2>
 						<span class="line"></span>
-						<p>Lorem ipsum dolor sit Pellentesque vel enim a</p>
-						<span>25$</span> <img src="img/special5.jpg" alt="">
+						<p>Saborosa raspadinha de melância</p>
+						<span>R$ 25</span> <img src="img/special5.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -246,7 +275,7 @@
 							data-os-animation="fadeIn" data-os-animation-delay="0.4s">
 						<p class="os-animation" data-os-animation="zoomInUp"
 							data-os-animation-delay="0.5s">Somos 5 integrantes que amam
-							gatos, e viemos para inovar tudo no mundo de alimentação.</p>
+							gatos, e viemos com tudo para inovar no mundo de alimentação com pratos idealizados por nossos gatos.</p>
 						<img src="img/sign.png" alt="" class="sign os-animation"
 							data-os-animation="zoomInDown" data-os-animation-delay="0.6s">
 					</div>
@@ -442,9 +471,17 @@
 	</section>
 
 	<section id="carinho">
-		<button href="#">Fechar compra</button>
-		<input onclick="document.get('7dec')"></input>
+		<div id="metric_results" align="center">
+    		<button type="button" class="btn btn-primary" id="create" onclick="Javascript:addTable()" data-toggle="modal"
+								data-target="#exampleModalCenter" data-scroll>Fechar compra</button>
+		</div>
 	</section>
+
+	<section id="pagamento">
+			<div align="center">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pagamento" data-scroll>Realizar pagamento</button>
+			</div>
+		</section>
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -462,7 +499,66 @@
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/fixed-responsive-nav.js"></script>
+	<script type="text/javascript">
+		var user, pass;
+		function init(){
+			Login = new Login()
+		}
+	</script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/waypoints.min.js"></script>
+	<script type="text/javascript">
+		function addTable() {
+			var myTableDiv = document.getElementById("metric_results")
+			var table = document.createElement('TABLE')
+			var tableBody = document.createElement('TBODY')
+
+			table.border = '1'
+			table.appendChild(tableBody);
+
+			var heading = new Array();
+			heading[0] = "Carrinho"
+			heading[1] = "Pratos"
+			heading[2] = "Descrição"
+			heading[3] = "Quantidade"
+			heading[4] = "Total"
+
+			var stock = new Array()
+			stock[0] = new Array("1", "SALADA CEASER VEGAN", "ricota, mussarela, grãoos e ervas", 1, "R$"+12)
+			// stock[1] = new Array("2", "SALADA COM SHOYU E VERDURAS", "verduras selecionadas com molho shoyu especial", 1, "R$"+17)
+			stock[1] = new Array("2", "PRATO PRINCIPAL DO CHEFF", "prato a base de beringela e especiarias", 1, "R$"+22)
+			// stock[3] = new Array("4", "MISTUREBA FOOD", "mistura de essências vegana", 1, "R$"+31)
+			// stock[4] = new Array("5", "FELINO'S FOOD", "prato mega saldável para o seu gato", 1, "R$"+25)
+			// stock[5] = new Array("6", "CREME DE PAPAYA", "creme de papaya cremoso com licor", 1, "R$"+12)
+			// stock[6] = new Array("7", "DOCE DE AMENDOIN", "delicioso doce de amendoin", 1, "R$"+5)
+			stock[2] = new Array("3", "TORTA DE NINHO E NUTELLA", "torta exclusiva do Restaurante Verde", 1, "R$"+7)
+			// 
+			stock[3] = new Array("4", "TOTAL", "################################", "####", "R$"+41)
+
+			
+			//Colunas
+			var tr = document.createElement('TR');
+			tableBody.appendChild(tr);
+			for (i = 0; i < heading.length; i++) {
+				var th = document.createElement('TH')
+				th.width = '150';
+				th.appendChild(document.createTextNode(heading[i]));
+				tr.appendChild(th);
+			}
+
+			//Linhas
+			for (i = 0; i < stock.length; i++) {
+				var tr = document.createElement('TR');
+				for (j = 0; j < stock[i].length; j++) {
+					var td = document.createElement('TD')
+					td.appendChild(document.createTextNode(stock[i][j]));
+					tr.appendChild(td)
+				}
+				tableBody.appendChild(tr);
+			}  
+			myTableDiv.appendChild(table)
+		}
+		
+		</script>
 </body>
 </html>
